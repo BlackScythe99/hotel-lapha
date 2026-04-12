@@ -1,0 +1,306 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+    background: #0f0f0f;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: gold;
+}
+
+/* LOGO */
+.logo {
+    color: gold;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('images/1.webp') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.hero {
+    height: 90vh;
+    background: url('images/1.webp') center/cover no-repeat;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* TEXT FIX */
+.hero-text {
+    position: relative;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+/* HEADING */
+.hero-text h2 {
+    font-size: 50px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.hero-text {
+    text-align: center;
+    margin: 0 auto;
+}
+.hero-text {
+    background: rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+button {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6c200;
+}
+
+/* FEATURES */
+.features {
+    text-align: center;
+}
+
+.feature-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ROOMS */
+.rooms {
+    text-align: center;
+}
+
+.room-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.room-card {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: scale(1.02);
+}
+
+.room-card img {
+    width: 50%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 25px;
+    text-align: left;
+    width: 50%;
+}
+
+.room-info h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.room-info p {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    color: gold;
+}
+
+/* GALLERY */
+.gallery {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* CONTACT */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info {
+    max-width: 300px;
+}
+
+.contact-info button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .room-card {
+        flex-direction: column;
+    }
+
+    .room-card img,
+    .room-info {
+        width: 100%;
+    }
+
+    .hero-text {
+        top: 30%;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+}
+/* FADE IN ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}

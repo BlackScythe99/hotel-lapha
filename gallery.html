@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Hotel Lapha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Hotel Lapha</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="gallery">
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="images/1.webp" onclick="openLightbox(this)">
+        <img src="images/2.webp" onclick="openLightbox(this)">
+        <img src="images/3.webp" onclick="openLightbox(this)">
+        <img src="images/4.webp" onclick="openLightbox(this)">
+        <img src="images/5.webp" onclick="openLightbox(this)">
+        <img src="images/6.webp" onclick="openLightbox(this)">
+        <img src="images/8.webp" onclick="openLightbox(this)">
+        <img src="images/9.webp" onclick="openLightbox(this)">
+        <img src="images/10.webp" onclick="openLightbox(this)">
+        <img src="images/11.webp" onclick="openLightbox(this)">
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
